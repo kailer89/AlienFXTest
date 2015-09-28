@@ -58,27 +58,22 @@ namespace AlienFXTest.Helpers
 						if (EnableGPU)
 						{
 							var breakAll = false;
-							IHardware[] hardware = teacup._pc.Hardware;
-							int num = 0;
-							while (num < (int)hardware.Length)
-							{
-								IHardware hardware1 = hardware[num];
-								hardware1.Update();
-								IHardware[] subHardware = hardware1.SubHardware;
-								for (i = 0; i < (int)subHardware.Length; i++)
-								{
-									subHardware[i].Update();
-								}
-								ISensor[] sensors = hardware1.Sensors;
-								for (i = 0; i < (int)sensors.Length; i++)
-								{
-									ISensor sensor = sensors[i];
-									float? value = sensor.Value;
-									if (value.HasValue)
-									{
-										if ((sensor.SensorType != SensorType.Temperature ? false : hardware1.HardwareType == HardwareType.GpuNvidia))
-										{
-                                            if (value > 0 && value <= 35) 
+
+                            foreach (var hw in teacup._pc.Hardware)
+                            {
+                                hw.Update();
+                                foreach (var shw in hw.SubHardware)
+                                {
+                                    shw.Update();
+                                }
+                                foreach (var sensor in hw.Sensors)
+                                {
+                                    float? value = sensor.Value;
+                                    if (value.HasValue)
+                                    {
+                                        if ((sensor.SensorType != SensorType.Temperature ? false : hw.HardwareType == HardwareType.GpuNvidia))
+                                        {
+                                            if (value > 0 && value <= 35)
                                             {
                                                 if (wardevil.CurrentSolidColor != Color.Red)
                                                 {
@@ -87,7 +82,7 @@ namespace AlienFXTest.Helpers
                                                     break;
                                                 }
                                             }
-                                            else if (value > 35 && value <= 50) 
+                                            else if (value > 35 && value <= 50)
                                             {
                                                 if (wardevil.CurrentSolidColor != Color.Orange)
                                                 {
@@ -96,24 +91,24 @@ namespace AlienFXTest.Helpers
                                                     break;
                                                 }
                                             }
-                                            else if (value > 50 && value <= 75) 
+                                            else if (value > 50 && value <= 75)
                                             {
                                                 wardevil.ChangeToSolidColor(Color.Yellow);
                                                 breakAll = true;
                                                 break;
                                             }
-                                            else if (value > 75 && value <= 100) 
+                                            else if (value > 75 && value <= 100)
                                             {
                                                 wardevil.ChangeToSolidColor(Color.Aqua);
                                                 breakAll = true;
                                                 break;
                                             }
-											
-										}
-									}
-								}
+
+                                        }
+                                    }
+                                }
                                 if (breakAll) break;
-							}
+                            }
 						}
 						if (EnableBatery)
 						{

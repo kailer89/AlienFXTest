@@ -16,3 +16,4 @@ D:\Users\ivaldez\Documents\Visual Studio 2013\Projects\AlienFXTest\AlienFXTest\o
 D:\Users\ivaldez\Documents\Visual Studio 2013\Projects\AlienFXTest\AlienFXTest\obj\x86\Debug\AlienFXTest.exe
 D:\Users\ivaldez\Documents\Visual Studio 2013\Projects\AlienFXTest\AlienFXTest\obj\x86\Debug\AlienFXTest.pdb
 D:\Users\ivaldez\Documents\Visual Studio 2013\Projects\AlienFXTest\AlienFXTest\bin\Debug\AlienFXTest.pdb
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\AlienFXTest\obj\x86\Debug\AlienFXTest.csprojResolveAssemblyReference.cache
