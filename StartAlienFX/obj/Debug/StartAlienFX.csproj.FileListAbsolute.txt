@@ -1,0 +1,5 @@
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\StartAlienFX\bin\Debug\StartAlienFX.exe.config
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\StartAlienFX\bin\Debug\StartAlienFX.exe
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\StartAlienFX\bin\Debug\StartAlienFX.pdb
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\StartAlienFX\obj\Debug\StartAlienFX.exe
+d:\users\ivaldez\documents\visual studio 2013\Projects\AlienFXTest\StartAlienFX\obj\Debug\StartAlienFX.pdb
